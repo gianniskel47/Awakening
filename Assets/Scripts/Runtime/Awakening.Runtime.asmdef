@@ -1,0 +1,30 @@
+{
+    "name": "Awakening.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:1491147abca9d7d4bb7105af628b223e",
+        "GUID:3b8ed52f1b5c64994af4c4e0aa4b6c4b",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:7f7d1af65c2641843945d409d28f2e20",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:a8ffdbcf527bc48df962e130f02cdd7e",
+        "GUID:432b70115e987f44abb984cfe7de384f",
+        "GUID:810f54f43f696374fb3b49d45b461274",
+        "GUID:fe25561d224ed4743af4c60938a59d0b",
+        "GUID:5540e30183c82e84b954c033c388e06c",
+        "GUID:4c3f49d89436d478ea78315c03159dcc",
+        "GUID:03058786646e84a4587858e9302c3f41",
+        "GUID:f2d49d9fa7e7eb3418e39723a7d3b92f",
+        "GUID:21c0832a707f1474bae60c055a90d405"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
