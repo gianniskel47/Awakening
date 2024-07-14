@@ -1113,10 +1113,12 @@ GameObject:
   - component: {fileID: 7063947545280424278}
   - component: {fileID: 3301622437317646488}
   - component: {fileID: 980277682598025639}
+  - component: {fileID: 311636675577211359}
   - component: {fileID: 7804387848015775660}
   - component: {fileID: 2464548446320837249}
   - component: {fileID: 607542140694330525}
   - component: {fileID: 804308915859673676}
+  - component: {fileID: -1283919272297167614}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1321,9 +1323,9 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9127791621067939166}
-        m_TargetAssemblyTypeName: HandleItems, Awakening.Runtime
-        m_MethodName: SpawnItem
+      - m_Target: {fileID: -1283919272297167614}
+        m_TargetAssemblyTypeName: Experience, Awakening.Runtime
+        m_MethodName: GainExperienceResponse
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1408,6 +1410,34 @@ MonoBehaviour:
       - m_Target: {fileID: 9127791621067939166}
         m_TargetAssemblyTypeName: HandleItems, Awakening.Runtime
         m_MethodName: DestroyItemFromStoring
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &311636675577211359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4226065756823772198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393313ff7c44f294f83c8122e04f4ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 370a9c7adf25459479f0ad33d89cf61b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -1283919272297167614}
+        m_TargetAssemblyTypeName: Experience, Awakening.Runtime
+        m_MethodName: GainExperienceResponse
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1505,6 +1535,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingLevel: 1
   progression: {fileID: 11400000, guid: 9b6c71215085e904293db0a365459d68, type: 2}
+  updateLevelUI: {fileID: 11400000, guid: 99b3838d7b166914f8a89563e7c78d7d, type: 2}
+--- !u!114 &-1283919272297167614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4226065756823772198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9db874bff630644a7a8daa0dc2d845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experiencePoints: 0
 --- !u!1 &4301089203753350599
 GameObject:
   m_ObjectHideFlags: 0

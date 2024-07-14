@@ -22,17 +22,14 @@ public class Progression : ScriptableObject
         }
 
         return levels[level - 1];
+    }
 
-        /*foreach (ProgressionStat progressionStat in stats)
-        {
-            if (progressionStat.stat != stat) continue;
+    public int GetLevels(Stat stat)
+    {
+        BuildLookUp();
 
-            if (progressionStat.levels.Length < level) continue;   //safety reasons
-
-            return progressionStat.levels[level - 1];
-        }
-
-        return 0;*/
+        float[] levels = statLookupTable[stat];
+        return levels.Length;
     }
 
     private void BuildLookUp()

@@ -52,7 +52,7 @@ public class HandleAttack : NetworkBehaviour
                 if (enemyHealth.canTakeDamage)
                 {
                     enemyHealth.GetDamage(handleEquipedItems.currentlyEquipedItem.damage);
-                    enemyHealth.Hit(playersBody.gameObject);
+                   // enemyHealth.Hit(playersBody.gameObject);
                 }
             }          
         }

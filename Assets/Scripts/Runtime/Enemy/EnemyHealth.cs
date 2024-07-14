@@ -9,9 +9,16 @@ public class EnemyHealth : NetworkBehaviour
     public bool canTakeDamage = false;
     BlazeAI blazeAI;
 
+    [SerializeField] GameEvent gainExperience;
+
+    BaseStats enemyBaseStats;
+
     private void Start()
     {
         blazeAI = GetComponent<BlazeAI>();
+        enemyBaseStats = GetComponent<BaseStats>();
+
+        health.Value = enemyBaseStats.GetStat(Stat.Health);
     }
 
     public void Hit(GameObject gameObj)
@@ -40,7 +47,9 @@ public class EnemyHealth : NetworkBehaviour
     [ClientRpc]
     private void UpdateOnDeathClientRpc()
     {
-        blazeAI.Death();
+        // blazeAI.Death();
+        Debug.Log("DEAAAD");
+        gainExperience.Raise(null, enemyBaseStats.GetStat(Stat.ExperienceReward));
     }
 
     private void OnTriggerEnter(Collider other)

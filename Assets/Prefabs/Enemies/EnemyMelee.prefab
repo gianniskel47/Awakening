@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 2967487675377254665}
   - component: {fileID: 537339510793855391}
   - component: {fileID: 4092468102640178815}
+  - component: {fileID: 3406483513854327906}
   m_Layer: 8
   m_Name: EnemyMelee
   m_TagString: enemy
@@ -91,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3152893892
+  GlobalObjectIdHash: 3012331451
   InScenePlacedSourceGlobalObjectIdHash: 3012331451
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -733,8 +734,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c6f350543df764c8dc482b40c966bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health:
+    m_InternalValue: 100
   canTakeDamage: 0
+  gainExperience: {fileID: 11400000, guid: 370a9c7adf25459479f0ad33d89cf61b, type: 2}
 --- !u!114 &4092468102640178815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,6 +753,20 @@ MonoBehaviour:
   soWeaponEquiped: {fileID: 11400000, guid: 87202724761b724499e743838cb5e2bf, type: 2}
   enemyWeapon: {fileID: 142295247136917277}
   enemyBody: {fileID: 1338756147653619324}
+--- !u!114 &3406483513854327906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076416781265579715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af323ce37727ff64185047bbf843ea39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingLevel: 1
+  progression: {fileID: 11400000, guid: de822ae1015442b449132ae108732f71, type: 2}
 --- !u!1001 &142295247137045053
 PrefabInstance:
   m_ObjectHideFlags: 0

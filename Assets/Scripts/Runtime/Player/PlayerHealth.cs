@@ -7,7 +7,10 @@ public class PlayerHealth : NetworkBehaviour
 {
     BaseStats baseStats;
 
-    [SerializeField] private float health = 1000;
+    [SerializeField] private float maxHealth = 1000;
+
+    [SerializeField] float currentHealth;
+
     [SerializeField] InputReader inputReader;
 
     AnimationController animationController;
@@ -20,16 +23,22 @@ public class PlayerHealth : NetworkBehaviour
 
         animationController = GetComponentInChildren<AnimationController>();
         baseStats = GetComponent<BaseStats>();
-        health = baseStats.GetStat(Stat.Health);
+        maxHealth = baseStats.GetStat(Stat.Health);
+        currentHealth = maxHealth;
     }
 
     public void OnDamage(float damage)
     {
         if (!IsOwner || isDead) return;
 
-        health -= damage;
+        currentHealth -= damage;
 
-        if(health <= 0)
+        if(currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+
+        if(currentHealth <= 0)
         {
             inputReader.DisableOnFootInputs();
             animationController.PlayDeathAnimation();
@@ -37,6 +46,13 @@ public class PlayerHealth : NetworkBehaviour
             UpdateTagServerRpc();
         }
     }
+
+/*    public void UpdateMaxHealth(Component component, object sender)
+    {
+        Progression progression = (Progression)sender;
+
+        maxHealth = progression.GetStat(Stat.Health);
+    }*/
 
     [ServerRpc(RequireOwnership = false)]
     private void UpdateTagServerRpc()

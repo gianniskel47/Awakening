@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 1665016258279036266}
   - component: {fileID: 2029756439280112741}
   - component: {fileID: 8833591875519246527}
+  - component: {fileID: -6521085631374563887}
   m_Layer: 8
   m_Name: EnemyRange
   m_TagString: enemy
@@ -91,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1013578117
+  GlobalObjectIdHash: 834041063
   InScenePlacedSourceGlobalObjectIdHash: 834041063
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -735,8 +736,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c6f350543df764c8dc482b40c966bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health:
+    m_InternalValue: 100
   canTakeDamage: 0
+  gainExperience: {fileID: 11400000, guid: 370a9c7adf25459479f0ad33d89cf61b, type: 2}
 --- !u!114 &8833591875519246527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +755,20 @@ MonoBehaviour:
   soWeaponEquiped: {fileID: 11400000, guid: 460d409d1054db7458583bf2b4e7f78e, type: 2}
   enemyWeapon: {fileID: 250650218620404762}
   enemyBody: {fileID: 6917870316115822832}
+--- !u!114 &-6521085631374563887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229799825575212422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af323ce37727ff64185047bbf843ea39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingLevel: 1
+  progression: {fileID: 11400000, guid: 624d23ab1094da24c8dc77332ca5d17c, type: 2}
 --- !u!1001 &3300508098370698743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -833,7 +850,7 @@ PrefabInstance:
     - target: {fileID: 8765730220161659794, guid: 61f53825f57bdf14c88f84f2f2dcd1e1,
         type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 557263377
+      value: 3978109900
       objectReference: {fileID: 0}
     - target: {fileID: 8765730220161659794, guid: 61f53825f57bdf14c88f84f2f2dcd1e1,
         type: 3}
